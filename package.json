@@ -1,0 +1,80 @@
+{
+  "name": "tuna-mobile-application",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "android": "react-native-scripts android",
+    "build:android": "exp build:android",
+    "build:ios": "exp build:ios",
+    "build:status": "exp build:status",
+    "eject": "react-native-scripts eject",
+    "flow": "flow",
+    "ios": "react-native-scripts ios",
+    "jsdoc": "jsdoc src -r -d docs -c jsdoc.json",
+    "login:expo": "exp login",
+    "prettify": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "publish:appstore": "yarn publish && babel-node scripts/expoBuild.js --ios",
+    "publish:googleplay": "yarn publish && babel-node scripts/expoBuild.js --android",
+    "publish": "yarn install && exp publish",
+    "start": "react-native-scripts start",
+    "test:jest": "node node_modules/jest/bin/jest.js --coverage",
+    "test:jestupdate": "node node_modules/jest/bin/jest.js -u",
+    "test:lint": "node ./node_modules/eslint/bin/eslint.js --ext .js --ext .jsx src",
+    "test:watch": "node node_modules/jest/bin/jest.js --watch --coverage",
+    "test": "yarn test:lint && && yarn test:jest && yarn flow && yarn jsdoc"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-eslint --write",
+      "git add"
+    ],
+    "*.jsx": [
+      "prettier-eslint --write",
+      "git add"
+    ],
+    "*.md": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "engines": {
+    "node": "^9.5.0",
+    "npm": "^5.6.0"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "expo": "^25.0.0",
+    "immutable": "^3.8.2",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-native-router-flux": "^4.0.0-beta.28",
+    "react-redux": "^5.0.7",
+    "redux": "^3.7.2",
+    "redux-persist": "4.8.2",
+    "redux-saga": "^0.16.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "dotenv": "^5.0.1",
+    "download-file": "^0.1.5",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.12.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "exp": "^49.2.2",
+    "flow-bin": "0.56.0",
+    "jest-expo": "25.0.0",
+    "jsdoc": "^3.5.5",
+    "jsdoc-babel": "^0.3.0",
+    "react-native-scripts": "1.11.1",
+    "react-test-renderer": "16.2.0"
+  }
+}

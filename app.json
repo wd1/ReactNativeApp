@@ -1,0 +1,29 @@
+{
+  "name": "tuna",
+  "displayName": "tuna",
+  "expo": {
+    "sdkVersion": "25.0.0",
+    "name": "Tuna",
+    "description": "Tuna Mobile Application",
+    "slug": "tuna",
+    "privacy": "public",
+    "version": "0.1.0",
+    "icon": "./assets/icons/app.png",
+    "loading": {
+      "icon": "./assets/icons/loading.png",
+      "hideExponentText": false
+    },
+    "packagerOpts": {
+      "assetExts": ["ttf", "mp4"]
+    },
+    "ios": {
+      "bundleIdentifier": "com.overtonedigital.tuna",
+      "supportsTablet": true,
+      "isRemoteJSEnabled": true,
+      "icon": "./assets/icons/app-store-image.png"
+    },
+    "android": {
+      "package": "com.overtonedigital.tuna"
+    }
+  }
+}
